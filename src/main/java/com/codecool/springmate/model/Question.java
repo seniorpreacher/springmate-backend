@@ -1,4 +1,4 @@
-package com.codecool.askmate.model;
+package com.codecool.springmate.model;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -7,7 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 import java.util.UUID;
 
@@ -31,7 +31,7 @@ public class Question {
 
     @Getter
     @UpdateTimestamp
-    @Column(insertable=false)
+    @Column(insertable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastUpdateTime;
 

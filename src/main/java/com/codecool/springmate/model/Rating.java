@@ -1,4 +1,4 @@
-package com.codecool.askmate.model;
+package com.codecool.springmate.model;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -22,7 +22,7 @@ public class Rating {
 
     @Getter
     @CreationTimestamp
-    @Column(insertable=false)
+    @Column(insertable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date submissionTime;
 

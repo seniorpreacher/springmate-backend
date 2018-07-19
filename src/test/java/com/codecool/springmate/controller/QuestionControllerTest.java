@@ -1,9 +1,9 @@
-package com.codecool.askmate.controller;
+package com.codecool.springmate.controller;
 
-import com.codecool.askmate.model.Question;
-import com.codecool.askmate.model.Rating;
-import com.codecool.askmate.repository.QuestionRepository;
-import com.codecool.askmate.repository.RatingRepository;
+import com.codecool.springmate.model.Question;
+import com.codecool.springmate.model.Rating;
+import com.codecool.springmate.repository.QuestionRepository;
+import com.codecool.springmate.repository.RatingRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

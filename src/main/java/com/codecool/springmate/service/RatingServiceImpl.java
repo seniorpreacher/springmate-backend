@@ -1,12 +1,12 @@
-package com.codecool.askmate.service;
+package com.codecool.springmate.service;
 
-import com.codecool.askmate.model.Rating;
-import com.codecool.askmate.repository.RatingRepository;
+import com.codecool.springmate.model.Rating;
+import com.codecool.springmate.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,18 +33,18 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public List<Rating> findAll(Sort sort){
+    public List<Rating> findAll(Sort sort) {
         return ratingRepository.findAll(sort);
     }
 
     @Override
-    public Page<Rating> findAll(Pageable pageable){
+    public Page<Rating> findAll(Pageable pageable) {
         return ratingRepository.findAll(pageable);
     }
 
     @Override
     public void delete(Long id) {
-    ratingRepository.deleteById(id);
+        ratingRepository.deleteById(id);
     }
 
     @Override

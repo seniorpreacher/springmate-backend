@@ -1,6 +1,6 @@
-package com.codecool.askmate.repository;
+package com.codecool.springmate.repository;
 
-import com.codecool.askmate.model.Question;
+import com.codecool.springmate.model.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

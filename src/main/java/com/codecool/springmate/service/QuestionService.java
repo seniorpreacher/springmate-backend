@@ -1,6 +1,6 @@
-package com.codecool.askmate.service;
+package com.codecool.springmate.service;
 
-import com.codecool.askmate.model.Question;
+import com.codecool.springmate.model.Question;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

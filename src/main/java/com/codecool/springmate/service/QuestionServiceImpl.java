@@ -1,12 +1,12 @@
-package com.codecool.askmate.service;
+package com.codecool.springmate.service;
 
-import com.codecool.askmate.model.Question;
-import com.codecool.askmate.repository.QuestionRepository;
+import com.codecool.springmate.model.Question;
+import com.codecool.springmate.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -38,18 +38,18 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public List<Question> findAll(Sort sort){
+    public List<Question> findAll(Sort sort) {
         return questionRepository.findAll(sort);
     }
 
     @Override
-    public Page<Question> findAll(Pageable pageable){
+    public Page<Question> findAll(Pageable pageable) {
         return questionRepository.findAll(pageable);
     }
 
     @Override
     public void delete(UUID id) {
-    questionRepository.deleteById(id);
+        questionRepository.deleteById(id);
     }
 
     @Override

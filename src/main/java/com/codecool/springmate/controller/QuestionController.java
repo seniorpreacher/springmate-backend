@@ -1,9 +1,8 @@
-package com.codecool.askmate.controller;
+package com.codecool.springmate.controller;
 
-import com.codecool.askmate.model.Question;
-import com.codecool.askmate.service.QuestionService;
+import com.codecool.springmate.model.Question;
+import com.codecool.springmate.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -24,21 +23,21 @@ public class QuestionController {
 
     @PostMapping("/question")
     public Question save(
-            @Valid @RequestBody Question question){
+            @Valid @RequestBody Question question) {
         return questionService.save(question);
     }
 
     @GetMapping("/question/{id}")
-    public Optional<Question> getById(@PathVariable(value = "id") UUID id){
+    public Optional<Question> getById(@PathVariable(value = "id") UUID id) {
         return questionService.find(id);
     }
 
     @PutMapping("/question/{id}")
     public Optional<Question> updateById(
             @PathVariable(value = "id") UUID id,
-            @Valid @RequestBody Question question){
+            @Valid @RequestBody Question question) {
         Optional<Question> optionalQuestion = questionService.find(id);
-        if(optionalQuestion.isPresent()){
+        if (optionalQuestion.isPresent()) {
             Question q = optionalQuestion.get();
             q.setTitle(question.getTitle());
             q.setMessage(question.getMessage());
@@ -50,22 +49,22 @@ public class QuestionController {
     }
 
     @GetMapping("/question")
-    public List<Question> getAll(){
+    public List<Question> getAll() {
         return questionService.findAll();
     }
 
     @DeleteMapping("/question/{id}")
-    public void deleteById(@PathVariable(value = "id") UUID id){
+    public void deleteById(@PathVariable(value = "id") UUID id) {
         questionService.delete(id);
     }
 
     @DeleteMapping("/question")
-    public void deleteAll(){
+    public void deleteAll() {
         questionService.deleteAll();
     }
 
     @GetMapping("/question/count")
-    public long count(){
+    public long count() {
         return questionService.count();
     }
 }

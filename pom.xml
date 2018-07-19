@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.codecool</groupId>
-    <artifactId>askmate</artifactId>
+    <artifactId>springmate</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>askmate</name>
+    <name>springmate</name>
     <description>Ask Mate project with Spring Boot</description>
 
     <parent>
